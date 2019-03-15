@@ -1,0 +1,41 @@
+<mat-tab-group mat-stretch-tabs class="front-page">
+    <mat-tab *ngFor="let item of tabContent" label="{{item.name}}">
+        <mat-grid-list cols="1" rowHeight="8:1">
+            <mat-grid-tile>
+                <h1 *ngIf="item.page.head.h1"><span>{{item.page.head.h1.charAt(0)}}</span>{{item.page.head.h1.slice(1)}}</h1>
+                <mat-divider [inset]="true"></mat-divider>
+            </mat-grid-tile>
+
+            <mat-grid-tile [ngStyle]="{'background-color': '#1b75bc'}">
+
+                <p *ngIf="item.page.head.p" [ngStyle]="{'color' : 'white'}">{{item.page.head.p}}</p>
+            </mat-grid-tile>
+        </mat-grid-list>
+        <mat-grid-list *ngFor="let service of item.page.services; index as i; even as e" cols="2" rowHeight="2:1">
+            <span *ngIf="e">
+            <mat-grid-tile >
+                <img src="{{service.img}}" class="img-fluid">
+            </mat-grid-tile>
+
+            <mat-grid-tile [ngStyle]="{'background-color': service.bgColor}">
+                
+                <button mat-raised-button color="default"  routerLink="{{service.link}}" routerLinkActive="active">View  {{service.name}}</button>
+                
+               
+            </mat-grid-tile>
+            </span>
+            <span *ngIf="!e">
+            <mat-grid-tile  [ngStyle]="{'background-color': service.bgColor}">
+                    <button mat-raised-button color="default" routerLink="{{service.link}}" routerLinkActive="active">View  {{service.name}}</button>
+            </mat-grid-tile>
+
+            <mat-grid-tile >
+                
+                    <img src="{{service.img}}" class="img-fluid">
+            </mat-grid-tile>
+       
+        </span>
+
+        </mat-grid-list>
+    </mat-tab>
+</mat-tab-group>

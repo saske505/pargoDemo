@@ -1,0 +1,267 @@
+@import url('https://fonts.googleapis.com/css?family=Roboto');
+@import '~@angular/material/theming';
+@include mat-core();
+// Define the default theme (same as the example above).
+$custom-typography: mat-typography-config( $font-family: 'Roboto, monospace',
+$headline: mat-typography-level(32px, 48px, 700),
+$body-1: mat-typography-level(16px, 24px, 500));
+$candy-app-primary: mat-palette($mat-indigo);
+$candy-app-accent: mat-palette($mat-pink,
+A200,
+A100,
+A400);
+$candy-app-theme: mat-light-theme($candy-app-primary,
+$candy-app-accent);
+$candy-app-primary: mat-palette($mat-indigo);
+$candy-app-accent: mat-palette($mat-pink,
+A200,
+A100,
+A400);
+$candy-app-theme: mat-light-theme($candy-app-primary,
+$candy-app-accent);
+body {
+    margin: 0;
+    font-family: 'Roboto';
+}
+
+p.title {
+    font-size: xx-large!important;
+    text-align: center!important;
+    color: white!important;
+    position: relative;
+    top: 3em;
+}
+
+.mat-list-icon {
+    color: rgba(0, 0, 0, 0.54);
+}
+
+.mat-subheader {
+    display: block!important;
+    box-sizing: border-box;
+    padding: 16px;
+    align-items: center;
+}
+
+h3.mat-subheader {
+    background: #006fc7;
+    height: 28px;
+    padding: 0px 0 0 0;
+    margin: 0px 0px 0px 0;
+    color: white;
+    text-align: center;
+    border-top: 1px solid #0000005e;
+}
+
+.mat-grid-list {
+    .mat-grid-tile {
+        border-bottom: 1px solid #dbdbdb;
+        color: #000;
+        img {
+            position: absolute;
+            left: 8px;
+            margin-left: 2em;
+            height: 25px;
+            top: 25px;
+        }
+        p {
+            color: #000;
+            font-family: 'Roboto';
+            width: auto;
+            text-align: inherit;
+            margin-top: 0;
+            font-size: small;
+            text-transform: unset;
+        }
+    }
+    .mat-progress-spinner circle {
+        fill: #b3b3b359;
+        transform-origin: center;
+        transition: stroke-dashoffset 225ms linear;
+    }
+    .mat-progress-spinner circle,
+    .mat-spinner circle {
+        stroke: #2196F3;
+    }
+    .mat-progress-spinner {
+        display: block;
+        position: absolute;
+        left: 0;
+        margin-left: 1em;
+        height: 45px !important;
+        width: 45px !important;
+        svg {
+            height: 45px !important;
+            width: 50px !important;
+        }
+    }
+}
+
+.front-page {
+    .mat-grid-list {
+        .mat-grid-tile {
+            border-bottom: 1px solid #dbdbdb;
+            color: #000;
+            img {
+                position: inherit;
+                left: auto;
+                margin-left: auto;
+                height: auto;
+                top: auto;
+            }
+            p {
+                color: #000;
+                font-family: 'Roboto';
+                width: auto;
+                text-align: inherit;
+                margin-top: 0;
+                font-size: small;
+                text-transform: unset;
+            }
+        }
+        .mat-progress-spinner circle {
+            fill: #b3b3b359;
+            transform-origin: center;
+            transition: stroke-dashoffset 225ms linear;
+        }
+        .mat-progress-spinner circle,
+        .mat-spinner circle {
+            stroke: #2196F3;
+        }
+        .mat-progress-spinner {
+            display: block;
+            position: absolute;
+            left: 0;
+            margin-left: 1em;
+            height: 45px !important;
+            width: 45px !important;
+            svg {
+                height: 45px !important;
+                width: 50px !important;
+            }
+        }
+    }
+}
+
+.mat-progress-bar-buffer {
+    background-color: #2196F3;
+}
+
+.mat-progress-bar-fill::after {
+    background-color: #FFEB3B;
+}
+
+.mat-toolbar {
+    z-index: 99999!important;
+    background: white;
+    color: black;
+    border-bottom: 2px solid #1a75bc;
+    box-shadow: -2px -2px 0px 0px #d2d2d2;
+    .mat-toolbar-row {
+        padding-right: 0;
+    }
+    button.mat-button {
+        height: 100%;
+    }
+}
+
+.logo {
+    img {
+        width: 55px;
+        margin-top: 13px;
+        border-radius: 50%;
+        border: 1px solid #d2d2d28a;
+    }
+}
+
+.nav-text {
+    margin-left: 1em;
+}
+
+.mat-tab-group {
+    h1 {
+        padding-left: 1em;
+        padding-right: 1em;
+        font-size: medium;
+        text-align: center;
+        span {
+            font-size: -webkit-xxx-large;
+            background: #efec2e;
+            width: 55px;
+            position: relative;
+            top: 10px;
+            right: 2px;
+            padding: 5px;
+            font-weight: 400;
+        }
+    }
+    p {
+        font-family: 'Roboto';
+        color: black;
+        width: 100%;
+        margin: 0;
+        padding: 0;
+        text-transform: initial;
+        text-align: justify;
+        padding-left: 1em;
+        padding-right: 1em;
+        font-weight: 200;
+        font-size: medium;
+    }
+    .mat-tab-label {
+        .mat-tab-label-content {
+            font-size: larger;
+            color: black!important;
+            padding-left: 1em;
+            padding-right: 1em;
+        }
+    }
+    .mat-ink-bar {
+        background-color: rgb(27, 117, 188)!important;
+    }
+}
+
+.mat-card {
+    background: hsl(0, 0%, 100%);
+    color: #fff;
+    border-radius: 0;
+}
+
+.mat-list-base {
+    .mat-subheader {
+        color: rgb(255, 255, 255);
+        background: #2196F3;
+        font-size: large!important;
+        margin-bottom: 1em!important;
+    }
+}
+
+.mat-grid-list#tracking {
+    display: block;
+    position: relative;
+    padding-bottom: 4px;
+    background: #efefef;
+    &:hover {
+        background: #fff900;
+        p {
+            color: #2196F3!important;
+            font-weight: bolder;
+        }
+        button {
+            background: rgb(3, 72, 126)!important;
+        }
+    }
+    .mat-button {
+        background: rgb(27, 117, 188);
+        color: white;
+        height: 100%;
+        border-radius: 0;
+        position: absolute;
+        right: 0;
+    }
+}
+
+.mat-tab-body-content {
+    height: 100%;
+    overflow: hidden!important;
+}

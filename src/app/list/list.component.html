@@ -1,0 +1,20 @@
+<h3 mat-subheader>Track your orders</h3>
+
+<mat-grid-list cols="4" rowHeight="3:1" *ngFor="let folder of folders;index as i;" id="tracking" fxLayout="row" fxlayout.sx="column" class="container" fxLayoutWrap>
+    <mat-grid-tile fxFlex="25%">
+        <mat-progress-spinner class="example-margin" color="{{folder.progress.color}}" mode="{{folder.progress.mode}}" value="{{folder.progress.value}}">
+        </mat-progress-spinner>
+        <p>{{folder.progress.value}}%</p>
+    </mat-grid-tile>
+    <mat-grid-tile fxFlex="25%">
+        <p mat-line>Order progress</p><br>
+
+    </mat-grid-tile>
+    <mat-grid-tile fxFlex="25%">
+        <p mat-line>{{folder.trackingNumber}}</p>
+    </mat-grid-tile>
+
+    <mat-grid-tile fxFlex="25%">
+        <button mat-button [ngStyle]="{'background': 'rgb(27, 117, 188)', 'color' : 'white'}" (click)="openBottomSheet(folder)">More info</button>
+    </mat-grid-tile>
+</mat-grid-list>

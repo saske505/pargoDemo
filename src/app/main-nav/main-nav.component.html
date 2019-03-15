@@ -1,0 +1,10 @@
+<mat-toolbar color="primary" class="fixed-header" layout="row">
+    <mat-toolbar-row>
+        <span class="logo"><a routerLink="/home" routerLinkActive="active"><img  src="./assets/logo.svg"></a></span>
+        <span class="nav-text">{{title}}</span>
+        <span class="spacer"></span>
+
+        <span class="spacer"></span>
+        <button mat-button *ngFor="let location of locations" [ngStyle]="{'background': location.bgColor, 'color' : location.color}" routerLink="{{location.route}}" routerLinkActive="active">{{location.name}}</button>
+    </mat-toolbar-row>
+</mat-toolbar>

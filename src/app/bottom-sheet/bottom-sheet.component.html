@@ -1,0 +1,12 @@
+<mat-nav-list fxLayout="column">
+    <h1><img src="./assets/logo.svg" height="45" style="position: relative;
+        top: 12px;
+        margin-right: 0.4em;"> <strong>{{data.trackingNumber}}</strong></h1>
+    <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Voluptates sint beatae iusto officiis, praesentium provident deleniti ipsam, sapiente aliquid recusandae neque quae magnam repudiandae molestiae ut eveniet laborum minima incidunt. order progrress</p>
+    <h1> <strong>Order Progress </strong> : <span mat-line>{{data.arrival}}</span></h1>
+    <mat-progress-bar mode="determinate" value="{{data.progress.value}}"></mat-progress-bar>
+    <p><span mat-line>Where is my package now ? {{data.status}}</span></p>
+    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Fugit quasi nesciunt ipsa nihil officia praesentium obcaecati vero ipsam molestiae. Dolorum eveniet soluta fugit doloremque voluptatem? Illo placeat nihil atque officia. </p>
+
+
+</mat-nav-list>
